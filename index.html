@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bryce Murad — Solution Architect, Founder, Builder. Living resume." />
+  <meta name="description" content="Bryce Murad — Solution Architect, Founder, Builder. Living resume.">
   <meta property="og:title" content="Bryce Murad — Builder">
-  <meta property="og:description" content="Solution Architect turned founder. Building AI-powered software products at this.live.">
+  <meta property="og:description" content="Solution architect turned founder. Building AI infrastructure, local models, and production software at this.live.">
   <meta property="og:url" content="https://bryce.this.live">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://bryce.this.live/headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bryce Murad — Builder">
-  <meta name="twitter:description" content="Solution Architect turned founder. Building AI-powered software products at this.live.">
+  <meta name="twitter:description" content="Solution architect turned founder. Building AI infrastructure, local models, and production software at this.live.">
   <meta name="twitter:image" content="https://bryce.this.live/headshot.jpg">
   <title>Bryce Murad — Builder</title>
   <link rel="icon" type="image/png" href="/favicon.png?v=2">
@@ -113,6 +113,8 @@
     .building-card--maestro:hover { box-shadow: 0 0 40px rgba(59,130,246,0.18); }
     .building-card--lite:hover { box-shadow: 0 0 40px rgba(16,185,129,0.18); }
     .building-card--tl:hover { box-shadow: 0 0 40px rgba(59,130,246,0.18); }
+    .building-card--pl:hover { box-shadow: 0 0 40px rgba(168,85,247,0.18); }
+    .building-card--er:hover { box-shadow: 0 0 40px rgba(236,72,153,0.18); }
 
     /* Tags */
     .tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 400; padding: 3px 10px; border-radius: 6px; background: rgba(59,130,246,0.10); color: #60a5fa; border: 1px solid rgba(59,130,246,0.15); margin: 3px 4px 3px 0; }
@@ -191,9 +193,9 @@
     <div class="container hero-content">
       <div class="hero-layout">
         <div class="hero-text">
-          <p class="hero-eyebrow">Founder / Solution Architect / Builder</p>
+          <p class="hero-eyebrow">Solution Architect / Founder / Builder</p>
           <h1>Bryce Murad</h1>
-          <p class="hero-title">Solution Architect turned founder. Building AI-powered software products and trading systems.</p>
+          <p class="hero-title">Solution architect turned founder. Building AI infrastructure, local models, and production software at this.live.</p>
           <div class="hero-contact">
             <span>Storrs, CT</span>
             <!-- phone hidden -->
@@ -234,10 +236,15 @@
           <div class="card-role">Architect</div>
           <p>One-click AI agent node deployment. Production-grade infrastructure for teams that need to run AI workloads on their own hardware without sending data to third parties.</p>
         </div>
-        <div class="building-card building-card--tl">
-          <h3>Fieldhouse</h3>
-          <div class="card-role">Co-Founder</div>
-          <p>iOS game studio under this.live. Building mobile games with original IP.</p>
+        <div class="building-card building-card--pl">
+          <h3>Personal Life OS</h3>
+          <div class="card-role">Creator</div>
+          <p>Full-stack productivity platform — native iOS app with widgets, notification infrastructure, survey UI, daily briefings, and Google Calendar sync. Shipping on Android and iOS.</p>
+        </div>
+        <div class="building-card building-card--er">
+          <h3>Even Realities</h3>
+          <div class="card-role">Developer</div>
+          <p>Building applications for Even Realities glasses. Active on Even Terminal, exploring spatial computing interfaces for AI agents.</p>
         </div>
         <div class="building-card building-card--tl">
           <h3>this.live LLC</h3>
@@ -265,11 +272,15 @@
           <span class="exp-date">2025 - Present</span>
         </div>
         <ul class="exp-bullets">
-          <li>Architecting multi-agent AI platform across dedicated hardware with network segmentation, encrypted mesh networking, and automated deployment pipelines</li>
-          <li>Deployed production LLM routing stack with multi-model inference, semantic caching, and intelligent cloud fallbacks across tiered task routing</li>
-          <li>Built distributed agent network with real-time messaging integrations, automated pipelines, and continuous security auditing</li>
-          <li>Developing agentic trading software with autonomous execution strategies, catalyst scoring, and options spread selection</li>
-          <li>Shipped Beacon: AI-powered lead generation platform for local service businesses, deployed to production with full billing and payment infrastructure</li>
+          <li>Architecting a six-node AI inference and routing fleet across dedicated hardware (DGX Spark, Mac Minis, Windows GPU node) with encrypted Tailscale mesh and network segmentation</li>
+          <li>Serving local LLMs at scale via vLLM, Ollama, and sglang — optimizing for throughput, latency, and cost across 15B-29B parameter models</li>
+          <li>Training local model adapters via cloud fine-tuning (TRL, LoRA/QLoRA) for specialized agent routing, then deploying quantized GGUF adapters for low-latency local inference</li>
+          <li>Deploying production LLM routing stack with semantic caching, intelligent cloud fallbacks, and tiered task routing — orchestrating decisions across local and 7+ cloud models</li>
+          <li>Built Forge — a source-grounded AI engineering agent with competence pipelines, adapter factory (cloud train to local serve), and deterministic agent configs</li>
+          <li>Built and shipped Personal Life OS: native iOS app with widgets, daily briefings, survey UI, Capacitor Android wrapper, and Google Calendar sync</li>
+          <li>Developing agentic trading software (Brokernomex) with autonomous execution, catalyst scoring, and options spread selection</li>
+          <li>Shipping Beacon: AI-powered lead generation platform deployed to production with billing, payments, and live user traffic</li>
+          <li>Building applications for Even Realities glasses, integrating AI agent capabilities into spatial computing interfaces</li>
         </ul>
       </div>
 
@@ -318,20 +329,21 @@
       <h2 class="section-title">Technical Stack</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h4>AI / Infrastructure</h4>
+          <h4>AI / LLM Infrastructure</h4>
           <div class="tags">
+            <span class="tag">vLLM</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">sglang</span>
             <span class="tag">LLM Orchestration</span>
             <span class="tag">Multi-Agent Systems</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">CUDA</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Tailscale</span>
-            <span class="tag">Redis</span>
+            <span class="tag">TRL / LoRA / QLoRA</span>
+            <span class="tag">GGUF Quantization</span>
+            <span class="tag">CUDA / GGML</span>
             <span class="tag">Python</span>
           </div>
         </div>
         <div class="skill-group">
-          <h4>Networking</h4>
+          <h4>Networking / Infra</h4>
           <div class="tags">
             <span class="tag">Cisco IOS</span>
             <span class="tag">VLANs</span>
@@ -341,6 +353,9 @@
             <span class="tag">MPLS</span>
             <span class="tag">IPSec VPN</span>
             <span class="tag">HSRP</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Tailscale</span>
+            <span class="tag">Redis</span>
           </div>
         </div>
         <div class="skill-group">
@@ -352,6 +367,16 @@
             <span class="tag">Linux</span>
             <span class="tag">GitHub Actions</span>
             <span class="tag">Azure</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Mobile / Apps</h4>
+          <div class="tags">
+            <span class="tag">iOS / Swift</span>
+            <span class="tag">Capacitor</span>
+            <span class="tag">React/TypeScript</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Even Realities SDK</span>
           </div>
         </div>
         <div class="skill-group">
@@ -432,7 +457,7 @@
         <a href="https://linkedin.com/in/bryce-murad" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:brycemurad0@gmail.com">Email</a>
       </div>
-      <span class="footer-copy">This is a living document. Last updated March 2026.</span>
+      <span class="footer-copy">This is a living document. Updated May 2026.</span>
     </div>
   </footer>
 </body>
